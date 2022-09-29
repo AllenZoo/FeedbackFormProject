@@ -1,0 +1,44 @@
+.result-page {
+  display: flex;
+  align-items: center;
+}
+
+.result-page-form-container {
+  text-align: center;
+  max-width: 400px;
+  min-width: 360px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background-color: hsl(216, 12%, 8%);
+  border-radius: 20px;
+  padding: 20px;
+  padding-bottom: 40px;
+  padding-top: 40px;
+}
+
+.rating-text-container {
+  display: flex;
+  padding: 5px 15px 5px 15px;
+  border-radius: 15px;
+  background-color: hsl(213, 19%, 18%);
+  margin-top: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+.rating-text {
+  color: hsl(25, 97%, 53%);
+}
+
+.result-page-title {
+  margin-top: 30px;
+  color: white;
+}
+
+.result-page-text {
+  margin-top: 10px;
+  color: hsl(216, 12%, 54%);
+}

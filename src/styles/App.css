@@ -53,40 +53,8 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin-top: 30px;
+  margin-top: 33px;
   margin-bottom: 33px;
-}
-
-.app-form-button,
-.app-form-button-selected {
-  width: 50px;
-  height: 50px;
-  border: none;
-  border-radius: 25px;
-
-  background-color: hsl(213, 19%, 18%);
-  color: hsl(216, 12%, 54%);
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  font-size: 18px;
-  padding-top: 3px;
-
-  transition: background-color 0.3s, color 0.5s;
-}
-
-.app-form-button:hover {
-  cursor: pointer;
-  background-color: hsl(25, 97%, 53%);
-  color: white;
-}
-
-.app-form-button-selected {
-  background-color: hsl(217, 12%, 63%);
-  color: white;
 }
 
 .app-form-submit-button {
@@ -102,16 +70,10 @@
 
   transition: background-color 0.3s, color 0.5s;
 }
-
 .app-form-submit-button:hover {
   cursor: pointer;
   background-color: white;
   color: hsl(25, 97%, 53%);
-}
-
-.app-form-buttons-container {
-  display: flex;
-  flex-direction: column;
 }
 
 input[type="radio"] {
@@ -125,6 +87,8 @@ input[type="radio"] {
 
   background-color: hsl(213, 19%, 18%);
   color: hsl(216, 12%, 54%);
+
+  transition: background-color 0.3s, color 0.5s;
 }
 
 input[type="radio"]:checked {
@@ -150,13 +114,7 @@ label span:first-of-type {
   pointer-events: none;
 }
 
-/* label span:first-of-type:not(:checked):hover {
-  cursor: pointer;
-  background-color: hsl(25, 97%, 53%);
-  color: white;
-} */
-
-#group1 {
+#rating {
   border: none;
 }
 
