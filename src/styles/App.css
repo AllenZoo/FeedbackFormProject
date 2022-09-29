@@ -1,25 +1,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap");
 
 .App {
-  margin: auto;
   text-align: center;
-  max-width: 1440px;
-  max-height: auto;
-
+  max-width: 400px;
+  min-width: 360px;
+  display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: center;
 }
 
 .app-form {
   display: flex;
+  flex-direction: column;
   background-color: hsl(216, 12%, 8%);
   border-radius: 20px;
   padding: 20px;
-}
-
-.padding {
-  flex: 1;
-  background-color: white;
+  padding-bottom: 40px;
 }
 
 .app-form-top {
@@ -29,23 +26,152 @@
 
 .app-form-top h1 {
   color: white;
+  margin-bottom: 10px;
 }
 
 .app-form-top p {
   font-size: 15;
-  color: white;
-}
-
-.app-form-top #star-icon {
+  color: hsl(217, 12%, 63%);
 }
 
 .star-icon-container {
   width: 50px;
   height: 50px;
   border-radius: 25px;
+  border: none;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: hsl(213, 19%, 18%);
+  margin-bottom: 30px;
+  margin-top: 15px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.15);
+}
+
+.app-form-button-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 30px;
+  margin-bottom: 33px;
+}
+
+.app-form-button,
+.app-form-button-selected {
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 25px;
+
+  background-color: hsl(213, 19%, 18%);
+  color: hsl(216, 12%, 54%);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 18px;
+  padding-top: 3px;
+
+  transition: background-color 0.3s, color 0.5s;
+}
+
+.app-form-button:hover {
+  cursor: pointer;
+  background-color: hsl(25, 97%, 53%);
+  color: white;
+}
+
+.app-form-button-selected {
+  background-color: hsl(217, 12%, 63%);
+  color: white;
+}
+
+.app-form-submit-button {
+  background-color: hsl(25, 97%, 53%);
+  color: white;
+
+  border-radius: 30px;
+  border: none;
+
+  padding: 10px;
+
+  font-size: 20px;
+
+  transition: background-color 0.3s, color 0.5s;
+}
+
+.app-form-submit-button:hover {
+  cursor: pointer;
+  background-color: white;
+  color: hsl(25, 97%, 53%);
+}
+
+.app-form-buttons-container {
+  display: flex;
+  flex-direction: column;
+}
+
+input[type="radio"] {
+  appearance: none;
+  font: inherit;
+
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 25px;
+
+  background-color: hsl(213, 19%, 18%);
+  color: hsl(216, 12%, 54%);
+}
+
+input[type="radio"]:checked {
+  background-color: hsl(217, 12%, 63%);
+  color: white;
+}
+
+input[type="radio"]:not(:checked):hover {
+  cursor: pointer;
+  background-color: hsl(25, 97%, 53%);
+  color: white;
+}
+
+input[type="radio"]:checked ~ span {
+  color: white;
+}
+
+label span:first-of-type {
+  position: relative;
+  top: -40px;
+  font-size: 18px;
+  color: hsl(216, 12%, 54%);
+  pointer-events: none;
+}
+
+/* label span:first-of-type:not(:checked):hover {
+  cursor: pointer;
+  background-color: hsl(25, 97%, 53%);
+  color: white;
+} */
+
+#group1 {
+  border: none;
+}
+
+.app-form-form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  width: 50px;
+  height: 50px;
+}
+
+.radio-button-container :hover {
+  cursor: pointer;
+  background-color: hsl(25, 97%, 53%);
+  color: white;
 }
