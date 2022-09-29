@@ -8,7 +8,7 @@ function Result() {
   return (
     <div className="result-page">
       <div className="result-page-form-container">
-        <img src={phone}></img>
+        <img src={phone} alt="picture"></img>
         <div className="rating-text-container">
           <p className="rating-text">
             You selected {location.state.rating} out of 5

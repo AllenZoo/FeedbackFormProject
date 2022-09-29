@@ -1,5 +1,4 @@
 import "../../styles/App.css";
-import Result from "../Result/Result";
 import AppForm from "./components/AppForm";
 import React, { Component } from "react";
 

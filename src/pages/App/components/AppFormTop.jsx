@@ -6,7 +6,7 @@ function AppFormTop() {
   return (
     <div className="app-form-top">
       <div className="star-icon-container">
-        <img src={star} id="star-icon"></img>
+        <img src={star} id="star-icon" alt="star-icon"></img>
       </div>
 
       <h1>How did we do?</h1>
