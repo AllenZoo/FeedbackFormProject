@@ -8,7 +8,7 @@ class AppFormButtons extends Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
   state = {
-    rating: 0,
+    selectedOption: 0,
   };
 
   onValueChange = (e) => {
@@ -19,7 +19,6 @@ class AppFormButtons extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
-    console.log(this.state.selectedOption);
     this.props.navigate("result", {
       state: { rating: this.state.selectedOption },
     });
