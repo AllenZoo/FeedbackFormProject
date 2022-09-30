@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import App from "./pages/App/App";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import Result from "./pages/Result/Result";
 
 class Root extends Component {
