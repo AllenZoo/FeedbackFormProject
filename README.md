@@ -35,8 +35,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [Feedback Form](https://allenzoo.github.io/FeedbackFormProject/)
 
 ## My process
 
@@ -49,17 +48,75 @@ Users should be able to:
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
-
-To see how you can add code snippets, see below:
-
 ```html
-<h1>Some HTML code I'm proud of</h1>
+/* Using custom radio inputs and wrapping them with label to add text to them and allowing hover + checked
+states to modify the text as well through css*/
+<form className="app-form-form" onSubmit={this.handleSubmit}>
+          <fieldset
+            id="rating"
+            className="app-form-button-list"
+            ref={this.ratingRef}
+          >
+            <label className="radio-button-container">
+              <input
+                type="radio"
+                name="rating"
+                value="1"
+                checked={this.state.selectedOption === "1"}
+                onChange={this.onValueChange}
+              />
+              <span>1</span>
+            </label>
+            <label className="radio-button-container">
+              <input
+                type="radio"
+                name="rating"
+                value="2"
+                checked={this.state.selectedOption === "2"}
+                onChange={this.onValueChange}
+              />
+              <span>2</span>
+            </label>
+            <label className="radio-button-container">
+              <input
+                type="radio"
+                name="rating"
+                value="3"
+                checked={this.state.selectedOption === "3"}
+                onChange={this.onValueChange}
+              />
+              <span>3</span>
+            </label>
+            <label className="radio-button-container">
+              <input
+                type="radio"
+                name="rating"
+                value="4"
+                checked={this.state.selectedOption === "4"}
+                onChange={this.onValueChange}
+              />
+              <span>4</span>
+            </label>
+            <label className="radio-button-container">
+              <input
+                type="radio"
+                name="rating"
+                value="5"
+                checked={this.state.selectedOption === "5"}
+                onChange={this.onValueChange}
+              />
+              <span>5</span>
+            </label>
+          </fieldset>
+          <button className="app-form-submit-button" type="submit">
+            Submit
+          </button>
+        </form>
 ```
 
-Styling radio-inputs
 
 ```css
+/* Styling radio-inputs */
 /* Default radio button appearance*/
 input[type="radio"] {
   appearance: none;
@@ -89,7 +146,8 @@ input[type="radio"]:not(:checked):hover {
   color: white;
 }
 
-/* Fixed problem of the button text not changing colour when hovering :) */
+/* Fixed problem of the button text not changing colour when hovering :),
+really found useful learning about +, ~ in css and modifying siblings */
 input[type="radio"]:not(:checked):hover + span {
   color: white;
 }
@@ -110,35 +168,34 @@ label span:first-of-type {
 ```
 
 ```js
-const proudOfThisFunc = () => {
-  console.log("🎉");
-};
+
+/*Learned to wrap class components with hooks! 
+This particular example was useful for navigating between pages using Reacts Navigate hook*/
+function WithNavigate(props) {
+  let navigate = useNavigate();
+  return <AppFormButtons {...props} navigate={navigate} />;
+}
+
+export default WithNavigate;
 ```
 
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
 
-**Note: Delete this note and the content within this section and replace with your own learnings.**
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+Definetely want to try getting more comfortable with using custom CSS and also familiarize myself with CSS connectors like (+, ~).
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+- [On event change another style](https://stackoverflow.com/questions/6910049/on-a-css-hover-event-can-i-change-another-divs-styling) - This helped me modify the css of other values when interacting with an input hover and click. Really useful, and something I will probably need to reference again in the future.
+- [Custom CSS Styling Radio Buttons](https://moderncss.dev/pure-css-custom-styled-radio-buttons/) - This is an amazing article which helped me learn about styling css radio buttons. Honestly a lifesaver - could not imagine what the code would like if I implemented this challenge using custom made buttons instead of radio buttons just because I couldn't match the design.
 
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
+- Frontend Mentor - [@AllenZoo](https://www.frontendmentor.io/profile/AllenZoo)
 
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
+_______________________________________________________________________________________________________________________________________________________________________
 
 # Getting Started with Create React App
 
