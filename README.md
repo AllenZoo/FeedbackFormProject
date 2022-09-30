@@ -46,10 +46,12 @@ Users should be able to:
 
 ### What I learned
 
-```html
+```js
 /* Using custom radio inputs and wrapping them with label to add text to them and allowing hover + checked
 states to modify the text as well through css*/
-<form className="app-form-form" onSubmit={this.handleSubmit}>
+
+<div className="app-form-buttons-container">
+        <form className="app-form-form" onSubmit={this.handleSubmit}>
           <fieldset
             id="rating"
             className="app-form-button-list"
@@ -110,6 +112,15 @@ states to modify the text as well through css*/
             Submit
           </button>
         </form>
+      </div>
+        
+        
+   /* Very useful function that keeps track of the checked radio button and stores its value*/
+  onValueChange = (e) => {
+    this.setState({
+      selectedOption: e.target.value,
+    });
+  };
 ```
 
 
