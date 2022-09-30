@@ -28,8 +28,7 @@ Users should be able to:
 
 ### Screenshot
 
-![alt text](https://github.com/AllenZoo/FeedbackFormProject/blob/master/public/Screenshot1.PNG?raw=true)
-![alt text](https://github.com/AllenZoo/FeedbackFormProject/blob/master/public/Screenshot2.PNG?raw=true)
+
 
 ### Links
 
