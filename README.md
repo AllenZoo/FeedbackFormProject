@@ -30,6 +30,7 @@ Users should be able to:
 - See the "Thank you" card state after submitting a rating
 
 ### Screenshot
+
 ![alt text](https://github.com/AllenZoo/FeedbackFormProject/blob/master/public/Screenshot1.PNG?raw=true)
 ![alt text](https://github.com/AllenZoo/FeedbackFormProject/blob/master/public/Screenshot2.PNG?raw=true)
 
@@ -57,9 +58,55 @@ To see how you can add code snippets, see below:
 <h1>Some HTML code I'm proud of</h1>
 ```
 
+Styling radio-inputs
+
 ```css
-.proud-of-this-css {
-  color: papayawhip;
+/* Default radio button appearance*/
+input[type="radio"] {
+  appearance: none;
+  font: inherit;
+
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 25px;
+
+  background-color: hsl(213, 19%, 18%);
+  color: hsl(216, 12%, 54%);
+
+  transition: background-color 0.3s, color 0.5s;
+}
+
+/* Checked radio button css */
+input[type="radio"]:checked {
+  background-color: hsl(217, 12%, 63%);
+  color: white;
+}
+
+/* Unchecked radio button css */
+input[type="radio"]:not(:checked):hover {
+  cursor: pointer;
+  background-color: hsl(25, 97%, 53%);
+  color: white;
+}
+
+/* Fixed problem of the button text not changing colour when hovering :) */
+input[type="radio"]:not(:checked):hover + span {
+  color: white;
+}
+
+/* Sets text of selected radio button to be white*/
+input[type="radio"]:checked ~ span {
+  color: white;
+}
+
+/* Styles and moves text within radio button */
+label span:first-of-type {
+  position: relative;
+  top: -40px;
+  font-size: 18px;
+  color: hsl(216, 12%, 54%);
+  pointer-events: none;
 }
 ```
 
